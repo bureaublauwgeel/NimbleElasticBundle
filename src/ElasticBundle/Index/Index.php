@@ -68,7 +68,7 @@ class Index
             $mappings = null;
 
             if (isset($typeData['mappings'])) {
-                $mappings = ['properties' => $typeData['mappings']];
+                $mappings = $typeData['mappings'];
             }
 
             $this->types[$typeName] = new Type($typeName, $this, $mappings);
